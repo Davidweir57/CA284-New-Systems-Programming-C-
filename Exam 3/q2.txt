@@ -1,0 +1,72 @@
+Steps:
+
+    1. Initialise a char array that is dynamically allocated memory.
+
+    2.  Prompt the user for a proverb. Continue to prompt them for a proverb until they enter "DONE". Once the user has inputted "DONE", exit
+        the while loop.
+        Example: "Please enter a proverb, enter 'DONE' when you are satisifed with your inputs."
+        
+        "Please enter a proverb, enter 'DONE' when you are satisifed with your inputs."
+        A bad workman always blames his tools.
+        "Please enter a proverb, enter 'DONE' when you are satisifed with your inputs."
+        DONE
+
+    3.  For each input add the proverb to the array.
+
+    4.  Write a function called validate() that checks that the string contains more than 1 proverb (i.e. checks the array length).
+
+    5.  Pass the array to validate():   if it is empty (returns 1) print "No inputs were provided".
+                                        if the length of the array is = 1 (returns 2) print the proverb and exit the program.
+                                        else (return 0) continue on as normal
+
+    6.  Write a function called count() which splits each element (proverb) in the array of proverbs into its component words (perhaps using
+        strtok and deliminating by whitespace). It then counts the number of words in each proverb, returning this count.
+
+    7, Initialise a 2 Dimensional array. Each array within this 2D array will consist of 2 elements: the proverb and it's word count.
+
+    8.  Write a function called sort() which uses some sorting alogorithm (e.g. Insertion Sort, Quicksort) to sort the given 2D array by word
+        count (the second element of each array). Alternatively, you might use qsort (in the standard C library) to sort the 2nd elements
+    
+    9. Pass the array to the sort function (using call by reference), which returns the sorted array.
+
+    6. Print the 1st element of each array in the now sorted 2 Dimensional array.
+
+Functions:
+
+    Count():
+
+        int count(int len, char array[]);
+
+        This function takes 2 paramenters: an array of strings and the array's length.
+
+        The function should return the word count of each string within the array.
+
+        The count function iterates through the string array. For each string element in the array it splits the string into it's component
+        words and counts them returning the word count for each string.
+
+    Sort():
+
+        void sort(int len, char* 2Darray[P][C]);
+
+        This function takes 2 parameters: a 2 Dimensional array of strings and the word count of each string and the array's length.
+
+        The function is a void function meaning it will not return anything. It is designed to sort the array by length, updating the array.
+
+        The sort function finds the length of the array. It then iterates through each element of the array and inserts it in the correct
+        position based on it's length. This function uses insertion sort to update the list so that it is sorted by length.
+    
+    Validate():
+
+        int validate(char array[]);
+
+        This function takes 1 parameter: a string array of strings.
+
+        The function returns 1 of 3 values depending on the length of the array:
+
+                                                                        -   if it is empty it returns 1, which will make the program print
+                                                                            "No inputs were provided" and exit.
+                                                                        -   if the array is of length 1, validate returns 2 and the program will
+                                                                            print the proverb and exit the program.
+                                                                        -   if the array has a lenth > 1 validate will return 0 and the program
+                                                                            will continue on as normal
+     

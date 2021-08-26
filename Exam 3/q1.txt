@@ -1,0 +1,11 @@
+Using pointers and a block of memory allows us to dynamically allocate memory to store all of the int items. We would use this in instances
+where we do not know the maximum lenght our array must be (how many elements there needs to be). This ensures memory is only allocated if it is
+needed ,preventing any waste of memory, and that we still have enough memory to store all of the items. We then use pointers to our array to
+manage each int item individually.
+
+Declaring an array at compile time risks allocating memory that will not be used or not allocating enough memory to store all of the required
+int items.
+
+Examples:
+    1. converting a group of int items from decimal to binary or vice versa
+    2. RPN calculators
